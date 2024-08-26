@@ -1,0 +1,11 @@
+﻿FROM mcr.microsoft.com/dotnet/nightly/sdk:8.0-jammy-aot AS build
+WORKDIR /src
+COPY . .
+RUN dotnet publish -c Release -r linux-x64 -o /app DemoApiAot.csproj
+RUN rm /app/*.dbg /app/*.Development.json
+
+FROM mcr.microsoft.com/dotnet/nightly/runtime-deps:8.0-jammy-chiseled-aot AS final
+WORKDIR /app
+COPY --from=build /app .
+USER $APP_UID
+ENTRYPOINT ["./DemoApiAot"]

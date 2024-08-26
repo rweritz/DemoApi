@@ -1,0 +1,15 @@
+﻿FROM mcr.microsoft.com/dotnet/sdk:8.0-jammy AS build
+WORKDIR /src
+COPY . .
+RUN dotnet publish DemoApi.csproj -c Release -o /app \
+   -r linux-x64 \
+   --self-contained true \
+   -p:PublishTrimmed=true \
+   -p:PublishSingleFile=true
+RUN rm /app/*.pdb /app/*.Development.json
+
+FROM mcr.microsoft.com/dotnet/runtime-deps:8.0-jammy-chiseled AS final
+WORKDIR /app
+COPY --from=build /app .
+USER $APP_UID
+ENTRYPOINT ["./DemoApi"]

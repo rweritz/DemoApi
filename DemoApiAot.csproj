@@ -4,7 +4,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <PublishAot>true</PublishAot>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,10 +13,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Alpine\" />
-    <Folder Include="CBL-Mariner\" />
-    <Folder Include="Ubuntu\" />
-  </ItemGroup>
-  
 </Project>

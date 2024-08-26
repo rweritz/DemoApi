@@ -1,0 +1,65 @@
+# Alpine
+
+### Alpine Normal
+@DemoApi_HostAddress_Alpine = http://localhost:5001
+GET {{DemoApi_HostAddress_Alpine}}/weatherforecast/
+Accept: application/json
+
+### Alpine Trimmed
+@DemoApi_HostAddress_AlpineTrimmed = http://localhost:5002
+GET {{DemoApi_HostAddress_AlpineTrimmed}}/weatherforecast/
+Accept: application/json
+
+### Alpine AOT
+@DemoApi_HostAddress_AlpineAot = http://localhost:5003
+GET {{DemoApi_HostAddress_AlpineAot}}/weatherforecast/
+Accept: application/json
+
+### Alpine Extra
+@DemoApi_HostAddress_AlpineExtra = http://localhost:5004
+GET {{DemoApi_HostAddress_AlpineExtra}}/weatherforecast/
+Accept: application/json
+
+# CBL-Mariner
+
+### CBL-Mariner Normal
+@DemoApi_HostAddress_CblMariner = http://localhost:5011
+GET {{DemoApi_HostAddress_CblMariner}}/weatherforecast/
+Accept: application/json
+
+### CBL-Mariner Distroless Trimmed
+@DemoApi_HostAddress_CblMarinerDistrolessTrimmed = http://localhost:5012
+GET {{DemoApi_HostAddress_CblMarinerDistrolessTrimmed}}/weatherforecast/
+Accept: application/json
+
+### CBL-Mariner Distroless AOT
+@DemoApi_HostAddress_CblMarinerDistrolessAot = http://localhost:5013
+GET {{DemoApi_HostAddress_CblMarinerDistrolessAot}}/weatherforecast/
+Accept: application/json
+
+### CBL-Mariner Distroless Extra
+@DemoApi_HostAddress_CblMarinerDistrolessExtra = http://localhost:5014
+GET {{DemoApi_HostAddress_CblMarinerDistrolessExtra}}/weatherforecast/
+Accept: application/json
+
+# Ubuntu
+
+### Jammy Normal
+@DemoApi_HostAddress_Jammy = http://localhost:5021
+GET {{DemoApi_HostAddress_Jammy}}/weatherforecast/
+Accept: application/json
+
+### Jammy Chiseled Trimmed
+@DemoApi_HostAddress_JammyChiseledTrimmed = http://localhost:5022
+GET {{DemoApi_HostAddress_JammyChiseledTrimmed}}/weatherforecast/
+Accept: application/json
+
+### Jammy Chiseled AOT
+@DemoApi_HostAddress_JammyChiseledAot = http://localhost:5023
+GET {{DemoApi_HostAddress_JammyChiseledAot}}/weatherforecast/
+Accept: application/json
+
+### Jammy Chiseled Extra
+@DemoApi_HostAddress_JammyChiseledExtra = http://localhost:5024
+GET {{DemoApi_HostAddress_JammyChiseledExtra}}/weatherforecast/
+Accept: application/json
